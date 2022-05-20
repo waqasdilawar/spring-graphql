@@ -1,0 +1,11 @@
+type User {
+    id: ID!
+    firstName: String
+    lastName: String
+}
+
+type Query {
+    findOne(id: ID!): User
+    allUsers: [User]
+}
+
