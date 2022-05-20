@@ -9,3 +9,7 @@ type Query {
     allUsers: [User]
 }
 
+type Subscription{
+    getRandomUser: User
+}
+
