@@ -3,10 +3,19 @@ type User {
     firstName: String
     lastName: String
 }
+input UserInput {
+    id: ID!
+    firstName: String
+    lastName: String
+}
 
 type Query {
     findOne(id: ID!): User
     allUsers: [User]
+}
+
+type Mutation{
+    addUser(user: UserInput): User
 }
 
 type Subscription{

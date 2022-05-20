@@ -17,6 +17,11 @@ public class UserRepository
         return users;
     }
 
+    public User addUser(User user){
+        users.add(user);
+        return findById(user.id());
+    }
+
     public User findById(Long id)
     {
         return users.stream()
